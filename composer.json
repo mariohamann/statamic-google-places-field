@@ -32,7 +32,7 @@
     ],
     "require": {
         "statamic/cms": "^3.0 || ^3.1",
-        "skagarwal/google-places-api": "^1.7"
+        "skagarwal/google-places-api": "^2.1"
     },
     "require-dev": {
         "orchestra/testbench": "^6.9",
@@ -45,5 +45,10 @@
         "test": [
             "php -d memory_limit=-1 -d max_execution_time=0 ./vendor/bin/phpunit"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
     }
 }
