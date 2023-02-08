@@ -17,6 +17,7 @@
  * Vue.component('google_place-fieldtype', require('./path/to/GooglePlace.vue'))
  */
 export default {
+  mixins: [Fieldtype],
 
   data() {
     return {
