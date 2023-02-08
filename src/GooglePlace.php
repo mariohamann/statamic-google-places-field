@@ -57,7 +57,9 @@ class GooglePlace
      */
     public function findPlace($input)
     {
-        $places = $this->placeApi->findPlace($input, 'textquery');
+        $places = $this->placeApi
+            ->withHeaders(['Accept-Language' => 'de'])
+            ->findPlace($input, 'textquery', ['language=de']);
 
         if (!$places->get('candidates')->count()) {
             return null;
